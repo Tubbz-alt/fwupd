@@ -157,7 +157,7 @@ fwupd_remote_download_func (void)
 	g_assert (fwupd_remote_get_metadata_uri (remote) != NULL);
 	g_assert (fwupd_remote_get_metadata_uri_sig (remote) != NULL);
 	g_assert_cmpstr (fwupd_remote_get_title (remote), ==, "Linux Vendor Firmware Service");
-	g_assert_cmpstr (fwupd_remote_get_report_uri (remote), ==, "https://fwupd.org/lvfs/firmware/report");
+	g_assert_cmpstr (fwupd_remote_get_report_uri (remote), ==, NULL);
 	g_assert_cmpstr (fwupd_remote_get_filename_cache (remote), ==,
 			 LOCALSTATEDIR "/lib/fwupd/remotes.d/lvfs/metadata.xml.gz");
 	g_assert_cmpstr (fwupd_remote_get_filename_cache_sig (remote), ==,
